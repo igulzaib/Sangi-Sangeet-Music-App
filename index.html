@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangi Sangeet</title>
+    <link rel="stylesheet" href="style.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!--------------------------------------------->
+    <!------------ 1 - NAVBAR SECTION ------------->
+    <!--------------------------------------------->
+    <nav>
+        <div class="navbar-left-section">
+            <div class="logo">
+                <lord-icon src="https://cdn.lordicon.com/hciqteio.json" trigger="loop"
+                    colors="primary:#0d081f,secondary:#0d081f" style="width:80px;height:80px"></lord-icon>
+            </div>
+            <div class="search-box">
+                <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="hover"
+                    colors="primary:#0d081f,secondary:#0d081f" style="width:40px;height:40px"></lord-icon>
+                <input type="text" placeholder="Search for songs, artists...">
+            </div>
+        </div>
+        <div class="navbar-right-section">
+            <a href="">Upgrade Plan</a>
+            <lord-icon src="https://cdn.lordicon.com/sbiheqdr.json" trigger="hover"
+                colors="primary:#0d081f,secondary:#0d081f" style="width:40px;height:40px"></lord-icon>
+            <lord-icon src="https://cdn.lordicon.com/mecwbjnp.json" trigger="hover"
+                colors="primary:#0d081f,secondary:#0d081f" style="width:40px;height:40px"></lord-icon>
+            <img class="profile-pic" src="https://i.pinimg.com/736x/50/e1/0a/50e10adde14aaba22093d6a1f5eda8b4.jpg"
+                alt="Profile Pic">
+        </div>
+    </nav>
+
+
+    <!-------------------------------------------->
+    <!------------ 2 - SONGS SECTION ------------->
+    <!-------------------------------------------->
+    <main>
+        <div class="song-section">
+            <div class="preview-song">
+                <div class="preview-song__img">
+                    <div class="preview-song__img--artist-name">Jasom Maras</div>
+                    <div class="preview-song__img--heart">
+                        <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" trigger="hover"
+                            colors="primary:#0d081f,secondary:#0d081f" style="width:40px;height:40px"></lord-icon>
+                    </div>
+                    <img src="https://media.istockphoto.com/photos/handsome-teenage-boy-with-headphones-over-head-picture-id1040906756?k=20&m=1040906756&s=612x612&w=0&h=L3UOY5flw2PYm4CWiIyLtXrb3-4cVajoXeEsv_FU01M="
+                        alt="Song Preview Image">
+                    <p>American Singer</p>
+                </div>
+                <div class="preview-song__controls">
+                    <button><img src="img/shuffle.png" alt="Shuffle"></button>
+                    <button><img src="img/backward.png" alt="Shuffle"></button>
+                    <button><img src="img/play.png" alt="Shuffle"></button>
+                    <button><img src="img/forward.png" alt="Shuffle"></button>
+                    <button><img src="img/loop.png" alt="Shuffle"></button>
+                </div>
+            </div>
+
+
+            <div class="playlist-song">
+                <div class="playlist-song__info">
+                    <div class="playlist-song__info--head">
+                        <span>Know.</span>
+                        <span>4.5<span style="font-size: 16px;">/5</span></span>
+                    </div>
+                    <div>
+                        <span>Jason Mraz • 2021 • 10 Songs</span>
+                    </div>
+                </div>
+                <div class="playlist-song__playlist">
+                    <div class="playlist-song__playlist--song playlist-song__playlist--song__active" active>
+                        <div>
+                            <span class="count-song"><img src="img/play-white.png" alt="Play"></span>
+                            <span class="name-song">let's see what the night can do</span>
+                        </div>
+                        <span class="duration-sont">4:05</span>
+                    </div>
+                    <div class="playlist-song__playlist--song">
+                        <div>
+                            <span class="count-song">2</span>
+                            <span class="name-song">have it all</span>
+                        </div>
+                        <span class="duration-sont">3:46</span>
+                    </div>
+                    <div class="playlist-song__playlist--song">
+                        <div>
+                            <span class="count-song">3</span>
+                            <span class="name-song">more than friends</span>
+                        </div>
+                        <span class="duration-sont">3:22</span>
+                    </div>
+                    <div class="playlist-song__playlist--song">
+                        <div>
+                            <span class="count-song">4</span>
+                            <span class="name-song">unlonely</span>
+                        </div>
+                        <span class="duration-sont">3:00</span>
+                    </div>
+                    <div class="playlist-song__playlist--song">
+                        <div>
+                            <span class="count-song">5</span>
+                            <span class="name-song">better with you</span>
+                        </div>
+                        <span class="duration-sont">4:12</span>
+                    </div>
+                    <div class="playlist-song__playlist--song">
+                        <div>
+                            <span class="count-song">6</span>
+                            <span class="name-song">no plans</span>
+                        </div>
+                        <span class="duration-sont">2:05</span>
+                    </div>
+                    <div class="playlist-song__playlist--song">
+                        <div>
+                            <span class="count-song">7</span>
+                            <span class="name-song">love is still the answer</span>
+                        </div>
+                        <span class="duration-sont">3:25</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <script>
+        let playlistSong = document.querySelector('.playlist-song__playlist--song');
+        let countSong = document.querySelector('.count-song');
+        let nameSong = document.querySelector('.name-song');
+        playlistSong.addEventListener("onmouseover", () => {
+            countSong.innerHTML = '<img src="img/play-white.png" alt="Play">';
+            nameSong.innerHTML = 'Wow';
+        });
+
+    </script>
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+
+</body>
+
+</html>
